@@ -2,15 +2,15 @@ function soma(a, b) {
     return a + b;
   }
 
-  function subtrae(a, b){
+function subtrae(a, b){
       return a - b;
   }
 
-  function multi(a, b){
+function multi(a, b){
       return a * b;
   }
 
-  function divide(a, b){
+function divide(a, b){
       return a/b;
   }
 
