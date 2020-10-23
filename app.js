@@ -26,14 +26,26 @@ app.get('/', function(req, res) {
 app.post('/soma', function (req, res) {
 var body = req.body;
 var resultado = soma(body.a, body.b);
+res.send(`O resultado da soma de ${body.a} e ${body.b} é ${resultado}`);
+});
+
+app.post('/subtrae', function (req, res) {
+var body = req.body;
 var resultado2 = subtrae(body.a, body.b);
+res.send(`O resultado da subtração de ${body.a} e ${body.b} é ${resultado2}`);
+});
+
+app.post('/multi', function (req, res) {
+var body = req.body;
 var resultado3 = multi(body.a, body.b);
+res.send(`O resultado da multiplicação de ${body.a} e ${body.b} é ${resultado3}`);
+});
+
+app.post('/divide', function (req, res) {
+var body = req.body;
 var resultado4 = divide(body.a, body.b);
-res.send(`O resultado da soma de ${body.a} e ${body.b} é ${resultado}
-O resultado da subtração é ${resultado2}
-O resultado da multiplicação é ${resultado3} e
-O resultado da divisão é ${resultado4}  `);
-  });
+res.send(`O resultado da divisão de ${body.a} e ${body.b} é ${resultado4}`);
+});
 
 var port = 3001;
 
